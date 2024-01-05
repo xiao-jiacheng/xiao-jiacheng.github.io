@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://xiao-jiacheng.github.io/2024/01/02/hello-world/"/>
+  <link rel="canonical" href="https://xiao-jiacheng.github.io/2024/01/05/5g ue鉴权流程详解 ue authentication/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,19 +33,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Hello World - 是否沉默代替你的回答</title>
+  <title>5G UE 鉴权流程  UE Authentication - 是否沉默代替你的回答</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="Chaos 的个人空间 - Chaos - 是否沉默代替你的回答">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://xiao-jiacheng.github.io/2024/01/02/hello-world/index.html">
+<meta property="og:title" content="5G UE 鉴权流程  UE Authentication">
+<meta property="og:url" content="https://xiao-jiacheng.github.io/2024/01/05/5G%20UE%E9%89%B4%E6%9D%83%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3%20UE%20Authentication/index.html">
 <meta property="og:site_name" content="是否沉默代替你的回答">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="名词解释 SUCI （Subscription Concealed Identifier）订阅隐藏标识符 SUPI  （Subscription Permanent Identifier）订阅永久标识符 SNN    （serving network name） 网络服务名 5G-GUTI(5G Globally Unique Temporary UE Identity ):5G全局唯一的临时U">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-01-02T10:11:37.447Z">
-<meta property="article:modified_time" content="2024-01-02T10:11:37.447Z">
+<meta property="article:published_time" content="2024-01-05T08:39:57.892Z">
+<meta property="article:modified_time" content="2024-01-05T08:51:01.336Z">
 <meta property="article:author" content="Chaos">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2521,7 +2521,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://xiao-jiacheng.github.io/2024/01/02/hello-world/">
+  <link itemprop="mainEntityOfPage" href="https://xiao-jiacheng.github.io/2024/01/05/5G UE鉴权流程详解 UE Authentication/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="是否沉默代替你的回答">
   </span>
@@ -2542,7 +2542,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Hello World
+        5G UE 鉴权流程  UE Authentication
       </h1>
       <div class='new-meta-box'>
         
@@ -2563,10 +2563,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-01-02T18:11:37+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-01-05T16:39:57+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2024年1月2日</p>
+    <p>发布于：2024年1月5日</p>
   </a>
 </div>
 
@@ -2589,19 +2589,186 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <blockquote>
+<p>名词解释<br> SUCI （Subscription Concealed Identifier）订阅隐藏标识符<br> SUPI  （Subscription Permanent Identifier）订阅永久标识符<br> SNN    （serving network name） 网络服务名<br> 5G-GUTI(5G Globally Unique Temporary UE Identity ):5G全局唯一的临时UE标识</p>
+</blockquote>
+<p>本文在学习UDM涉及UE认证相关服务，对UDM相关服务比较详细，其他部分可能比较粗略。</p>
+<p>5G鉴权由AMF和AUSF共同完成<br>5G鉴权向量不支持预取，也不支持一次获取多组鉴权向量</p>
+<h4 id="SNN"><a href="#SNN" class="headerlink" title="SNN"></a>SNN</h4><p>SNN(Server Network Name)<br>5G SNN的作用：</p>
+<ul>
+<li>用于推导锚点密钥，作为AUSF推到Kseaf的输入参数，以及作为UE推到RES<em>和XRES</em>的输入参数。</li>
+<li>将锚点密钥和服务网路绑定</li>
+<li>通过服务码设置为5g来抱枕锚点密钥用于5G核心网和UE之间的鉴权认证。</li>
+</ul>
+<p>SNN最长1020个字节，由两部分构成：SNN-service-code和SNN-network-identifier，中间用冒号“:”进行连接。</p>
+<p>由于在认证和鉴权过程中，安全密钥需要在UE和SEAF（位于AMF中）中分别推导，因此，SNN作为密钥推导的输入参数，需要在UE和SEAF分别进行构造。<br>SNN-service-code：固定为“5G”。在通过non-3GPP接入时，也用于区分接入网络，作为Access Network Identity使用；<br>SNN-network-identifier：用于识别当前的移动网络。根据TS 24.501章节9.12.1规定，对于PLMN网络，该值为：mncXXX.mccXXX.3gppnetwork.org（都为小写字母）。</p>
+<h4 id="鉴权流程的触发条件"><a href="#鉴权流程的触发条件" class="headerlink" title="鉴权流程的触发条件"></a>鉴权流程的触发条件</h4><p>与UE建立信令连接的过程都可以触发鉴权流程：</p>
+<ul>
+<li>UE使用SUCI发起注册流程</li>
+<li>AMF 没有 UE 的有效上下文</li>
+<li>Registration Request消息没有被完整性保护</li>
+<li>UE携带 5G-GUTI注册，但old AMF对注册请求消息执行完整性检查失败</li>
+</ul>
+<h3 id="鉴权流程"><a href="#鉴权流程" class="headerlink" title="鉴权流程"></a>鉴权流程</h3><p>鉴权流程分为三个阶段：</p>
+<ul>
+<li>请求阶段</li>
+<li>响应阶段</li>
+<li>鉴权确认和注册绑定部分</li>
+</ul>
+<h4 id="请求阶段"><a href="#请求阶段" class="headerlink" title="请求阶段"></a>请求阶段</h4><p>Nausf_UEAuthentication_Authenticate Request</p>
+<h5 id="消息方向1-AMF-SEAF-AUSF"><a href="#消息方向1-AMF-SEAF-AUSF" class="headerlink" title="消息方向1  AMF&#x2F;SEAF -&gt; AUSF"></a>消息方向1  AMF&#x2F;SEAF -&gt; AUSF</h5><p>http方法：POST     url：{apiRoot}&#x2F;nausf-auth&#x2F;{v}&#x2F;ue-authentications</p>
+<p>AMF 根据 从UE 得到的SUCI（订阅隐藏标识符）或者从 old AMF中获得的SUPI，选择对该UE进行鉴权的AUSF，构造Nausf_UEAuthentication_Authenticate Request消息并发送给该AUSF。<br>AUSF收到请求消息后，会检查消息中的Serving Network Name是否得到了授权。如果检查失败，则返回：403 Forbidden，携带的原因值为：SERVING_NETWORK_NOT_AUTHORIZED。</p>
+<h5 id="消息方向2-AUSF-UDM"><a href="#消息方向2-AUSF-UDM" class="headerlink" title="消息方向2  AUSF -&gt; UDM"></a>消息方向2  AUSF -&gt; UDM</h5><p>HTTP方法：POST<br>消息名称：Nudm_UEAuthentication_Get Request</p>
+<p>该请求的资源URI为：<br>{apiRoot}&#x2F;nudm-ueau&#x2F;v1&#x2F;{supiOrSuci}&#x2F;security-information&#x2F; generate-auth-data</p>
+<p><img src="https://img-blog.csdnimg.cn/16272604ed7643cb89f7314c35733e0a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5a2Z5oKf56m6,size_20,color_FFFFFF,t_70,g_se,x_16" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/16272604ed7643cb89f7314c35733e0a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5a2Z5oKf56m6,size_20,color_FFFFFF,t_70,g_se,x_16" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="鉴权数据请求"><br>该消息用于AUSF请求UDM为UE选择一种鉴权方法，并计算新的鉴权向量（如果该鉴权需要鉴权向量的话）。如果请求中包含的是SUCI，UDM收到该请求后，首先，SIDF将SUCI解密为SUPI，之后根据SUPI为UE选择鉴权方式。目前，5G使用的鉴权方式有两种：EAP-AKA 和5G AKA。</p>
+<h4 id="响应阶段"><a href="#响应阶段" class="headerlink" title="响应阶段"></a>响应阶段</h4><h5 id="UDM生成鉴权向量"><a href="#UDM生成鉴权向量" class="headerlink" title="UDM生成鉴权向量"></a>UDM生成鉴权向量</h5><p>HRES    Hash RESponse<br>HXRES    Hash eXpected RESponse<br>IKE    Internet Key Exchange<br>KSI    Key Set Identifier</p>
+<ul>
+<li>UDM&#x2F;ARPF生成鉴权向量<br>UDM&#x2F;ARPF在生成鉴权向量时，需要将Authentication Management Field (AMF)的separation bit设置为”1”。separation bit为AUTN中AMF字段的第0比特，该值为1标识生成的鉴权向量用于EPS&#x2F;5G AKA鉴权，对于鉴权向量来讲，如果设置为1，AKS鉴权过程中产生的CK和IK鉴权密钥不会离开HSS。 UDM&#x2F;ARPF推导出 KAUSF并计算XRES<em>（在推导Kausf和XRES</em>时都会将serving network name作为输入参数使用）。最后UDM&#x2F;ARPF生成的5G HE AV包含RAND、AUTN、XRES*、KAUSF四个参数。（其中鉴权令牌AUTN &#x3D; SQN Å AK || AMF || MAC）</li>
+</ul>
+<h5 id="AUSF获得鉴权信息回应"><a href="#AUSF获得鉴权信息回应" class="headerlink" title="AUSF获得鉴权信息回应"></a>AUSF获得鉴权信息回应</h5><p>消息方向：UDM - &gt;AUSF<br><img src="https://img-blog.csdnimg.cn/5e087efae9df45628b73e39981b5b286.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5a2Z5oKf56m6,size_20,color_FFFFFF,t_70,g_se,x_16" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/5e087efae9df45628b73e39981b5b286.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5a2Z5oKf56m6,size_20,color_FFFFFF,t_70,g_se,x_16" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="鉴权消息回应"></p>
+<p>UDM对请求阶段AUSF的请求做出回应<br>UDM成功响应AUSF，返回200 OK响应。UDM计算出5G HE AV（RAND、AUTN、XRES*、KAUSF），并在响应消息中返回给AUSF。携带AuthenticationInfoResult内容。</p>
+<p>(1).UDM</p>
+<h5 id="AUSF保存XRES"><a href="#AUSF保存XRES" class="headerlink" title="AUSF保存XRES*"></a>AUSF保存XRES*</h5><p>AUSF临时保存从响应消息中的XRES*和SUPI，用于归属地的鉴权比较。</p>
+<h5 id="AUSF计算XRES"><a href="#AUSF计算XRES" class="headerlink" title="AUSF计算XRES*"></a>AUSF计算XRES*</h5><p>AUSF根据接收到的5G HE AV（RAND、AUTN、XRES<em>、KAUSF）来计算5G AV（RAND、AUTN、HXRES</em>、KSEAF）；根据XRES<em>计算出HXRES</em>；根据KAUSF计算出KSEAF（计算KSEAF仍然需要serving network name作为输入参数）。锚点密钥Kseaf此时诞生。</p>
+<h5 id="消息方向：AUSF-AMF-SEAF"><a href="#消息方向：AUSF-AMF-SEAF" class="headerlink" title="消息方向：AUSF -&gt; AMF&#x2F;SEAF"></a>消息方向：AUSF -&gt; AMF&#x2F;SEAF</h5><p>消息名称：Nausf_UEAuthentication_Authenticate Response</p>
+<p>AUSF 删除KSEAF，并在Nausf_UEAuthentication_Authenticate Response消息中向AMF返回5G SE AV (RAND, AUTN, HXRES*) 。</p>
+<p>从上述可见，AUSF产生的5G AV并没有直接发送给AMF，而是分两步发送：第一步，发送5G SE AV用于拜访地鉴权；第二步，如果拜访地鉴权成功，返回RES*归属地鉴权成功后，将锚点密钥Kseaf发送给AMF，此时才将完整的5G AV发送给了AMF。</p>
+<h5 id="消息方向：AMF-SEAF-UE"><a href="#消息方向：AMF-SEAF-UE" class="headerlink" title="消息方向：AMF&#x2F;SEAF -&gt; UE"></a>消息方向：AMF&#x2F;SEAF -&gt; UE</h5><p>消息名称：Authentication Request（NAS消息）</p>
+<p>AMF&#x2F;SEAF保存接收到的HXRES*，并向UE发送Authentication Request消息，启动T3560计时器，消息中包含RAND、AUTN、ngKSI、ABBA等参数。ME转发接收到的Authentication Request消息中的RAND和AUTN 给USIM。</p>
+<p>5G AKA流程都是由网络发起的，UE可以拒绝网络发起的鉴权请求。</p>
+<h5 id="UE计算RES"><a href="#UE计算RES" class="headerlink" title="UE计算RES*"></a>UE计算RES*</h5><p>USIM收到RAND和AUTN，需要先检查AUTN中的MAC区域，验证接收的AUTN新鲜度。验证通过后，USIM计算RES，并和CK、IK一起返回给ME。如果USIM 根据CK和IK计算出了Kc (如GPRS Kc) 也发给了ME，则ME忽略该值，在USIM和ME上都不保存该值。之后，ME根据收到的RES计算RES*（serving network name、RAND等作为输入参数）。ME根据CK||IK 、serving network  name 及AUTN中的SQN Å  AK 计算出KAUSF，进而计算出 KSEAF （serving network name作为输入参数）。最后，ME检查AUTN的AMF域的”separation bit”是否为1。</p>
+<h5 id="消息方向：-UE-AMF-SEAF"><a href="#消息方向：-UE-AMF-SEAF" class="headerlink" title="消息方向： UE -&gt; AMF&#x2F;SEAF"></a>消息方向： UE -&gt; AMF&#x2F;SEAF</h5><p>消息名称：Authentication Response（NAS消息）</p>
+<p>UE构造Authentication Response消息发送给AMF&#x2F;SEAF。AMF&#x2F;SEAF收到Authentication Response消息后停止T3560计时器。</p>
+<p>Authentication Response消息包含在Uu接口RRC层的ULInformationTransfer消息和N2接口的Uplink NAS Transport消息中发送给AMF&#x2F;SEAF。</p>
+<h5 id="AMF-SEAF计算HRES"><a href="#AMF-SEAF计算HRES" class="headerlink" title="AMF&#x2F;SEAF计算HRES*"></a>AMF&#x2F;SEAF计算HRES*</h5><p>AMF&#x2F;SEAF根据UE发送的RES<em>计算出HRES</em> （输入参数有RES<em>、RAND等），SEAF比较HRES</em>和HXRES<em>，如果二者一致，则认为UE在当前的拜访网络鉴权成功。之后，执行第10步，通过Nausf_UEAuthentication_Authenticate Request消息将RES</em>发送给AUSF进行归属地鉴权。</p>
+<p>如果HRES<em>和HXRES</em>不一致，则认为UE在拜访网络鉴权失败，仍然会继续执行第10步，只是此时不携带RES*，而是携带空值，以通知AUSF在拜访地鉴权失败。</p>
+<p>如果此时UE不可达，SEAF不会收到RES* ，则SEAF认为本次鉴权失败，并通知AUSF。</p>
+<h5 id="消息方向：-AMF-SEAF-AUSF"><a href="#消息方向：-AMF-SEAF-AUSF" class="headerlink" title="消息方向： AMF&#x2F;SEAF -&gt; AUSF"></a>消息方向： AMF&#x2F;SEAF -&gt; AUSF</h5><p>HTTP方法：PUT（注意：EAP鉴权方式时本步骤为POST方法）</p>
+<p>消息名称：Nausf_UEAuthentication_Authenticate Request</p>
+<p>该请求消息调用AUSF的资源URI:</p>
+<p>{apiRoot}&#x2F;nausf-auth&#x2F;v1&#x2F;ue-authentications&#x2F;{authCtxId}&#x2F;5g-aka-confirmation</p>
+<p>该URI在第5步的响应消息中_links字段携带，也可以由AMF自行构造。如果构造的不准确，则在返回响应消息：404 Not Found，携带原因值：CONTEXT_NOT_FOUND，表示AUSF没有找到对应的资源URI。</p>
+<p>该消息携带的确认数据只有ConfirmationData，包含：RES*。但是该值也有为空的情况，表示通知AUSF拜访地鉴权失败。具体场景如下：</p>
+<ul>
+<li><p>UE不可达的情况，AMF不会收到RES*；</p>
+</li>
+<li><p>拜访地鉴权失败AMF比较HRES<em>和HXRES</em>不一致；</p>
+</li>
+<li><p>AMF收到UE的authentication failure消息，如：synchronization failure或者MAC failure。</p>
+</li>
+</ul>
+<h5 id="AUSF验证RES"><a href="#AUSF验证RES" class="headerlink" title="AUSF验证RES*"></a>AUSF验证RES*</h5><p>AUSF收到RES<em>后，首先验证5G AV是否过期。如果5G AV过期了，则认为归属网络鉴权失败。如果5G AV验证不超期，AUSF加密保存Kausf。之后，AUSF比较接收到的 RES</em>和保存的XRES*是否一致，如果一致，AUSF认为归属网络鉴权成功，并通知UDM鉴权结果，之后开启鉴权确认和注册绑定流程。</p>
+<h5 id="消息方向：-AUSF-AMF-SEAF"><a href="#消息方向：-AUSF-AMF-SEAF" class="headerlink" title="消息方向： AUSF -&gt; AMF&#x2F;SEAF"></a>消息方向： AUSF -&gt; AMF&#x2F;SEAF</h5><p>消息名称：Nausf_UEAuthentication_Authenticate Response</p>
+<p>如果AUSF鉴权成功，则向AMF&#x2F;SEAF返回200 OK响应，携带ConfirmationDataResponse信息</p>
+<h4 id="鉴权确认和注册绑定部分"><a href="#鉴权确认和注册绑定部分" class="headerlink" title="鉴权确认和注册绑定部分"></a>鉴权确认和注册绑定部分</h4><p>该步骤主要用于防止AMF的虚假注册，如UE所处拜访网络没有的AMF，确发起了Nudm_UECM_Registration_Request，导致UE注册在了一个不存在的AMF上。</p>
+<h5 id="消息方向：AUSF-UDM"><a href="#消息方向：AUSF-UDM" class="headerlink" title="消息方向：AUSF -&gt; UDM"></a>消息方向：AUSF -&gt; UDM</h5><p>HTTP方法：POST</p>
+<p>消息名称：Nudm_UEAuthentication_ResultConfirmation Request</p>
+<p>该请求消息的资源URI如下：</p>
+<p>{apiRoot}&#x2F;nudm-ueau&#x2F;v1&#x2F;{supi}&#x2F;auth-events<br><img src="https://img-blog.csdnimg.cn/d745361a03e546759382565178b27a1e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5a2Z5oKf56m6,size_20,color_FFFFFF,t_70,g_se,x_16" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/d745361a03e546759382565178b27a1e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5a2Z5oKf56m6,size_20,color_FFFFFF,t_70,g_se,x_16" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="鉴权确认"></p>
+<h5 id="UDM保存AuthEvent相关信息"><a href="#UDM保存AuthEvent相关信息" class="headerlink" title="UDM保存AuthEvent相关信息"></a>UDM保存AuthEvent相关信息</h5><p>UDM保存UE的鉴权状态，如SUPI、鉴权结果、时间戳、serving network name等。</p>
+<h5 id="消息方向：UDM-AUSF"><a href="#消息方向：UDM-AUSF" class="headerlink" title="消息方向：UDM -&gt; AUSF"></a>消息方向：UDM -&gt; AUSF</h5><p>消息名称：Nudm_UEAuthentication_ResultConfirmation Response</p>
+<p>成功响应<br>返回201 Created，消息体可以为空。如果不为空，则返回AuthEvent内容。HTTP消息头的Location字段包含创建的资源，URI如下：</p>
+<p>{apiRoot}&#x2F;nudm-ueau&#x2F;v1&#x2F;{supi}&#x2F;auth-events&#x2F;{authEventId}</p>
+<p>失败响应<br>404 Not Found，原因值：USER_NOT_FOUND。<br>。</p>
+<h5 id="UDM对后续流程的鉴权"><a href="#UDM对后续流程的鉴权" class="headerlink" title="UDM对后续流程的鉴权"></a>UDM对后续流程的鉴权</h5><p>如果UDM收到了UE的后续流程，如：AMF发送的Nudm_UECM_Registration_Request消息，UDM会根据运营商策略执行相关检测和保护操作（详见TS 33.501，3GPP仅提供了建议操作）。</p>
+<h3 id="UDM工作流程"><a href="#UDM工作流程" class="headerlink" title="UDM工作流程"></a>UDM工作流程</h3><h4 id="AUSF-UDM"><a href="#AUSF-UDM" class="headerlink" title="AUSF -&gt; UDM"></a>AUSF -&gt; UDM</h4><p>见上文请求阶段ausf向UDM请求鉴权向量<br>请求内容：AuthenticationInfoRequest</p>
+<table>
+<thead>
+<tr>
+<th>结构名: AuthenticationInfoRequest</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>字段名</td>
+<td>数据类型</td>
+<td>说明</td>
+</tr>
+<tr>
+<td>servingNetworkName</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>resynchronizationInfo</td>
+<td>ResynchronizationInfo</td>
+<td>同步信息</td>
+</tr>
+<tr>
+<td>suportedFeatures</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ausfInstanceId	String</td>
+<td></td>
+<td>Ausf Id</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>结构名:ResynchronizationInfo</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>字段名</td>
+<td>数据类型</td>
+<td>说明</td>
+</tr>
+<tr>
+<td>rand</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>auts</td>
+<td>String</td>
+<td>AUTS由UE计算得到</td>
+</tr>
+</tbody></table>
+<p>回复内容：AuthenticationInfoResult</p>
+<table>
+<thead>
+<tr>
+<th>结构名: AuthenticationInfoResult</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>字段名</td>
+<td>数据类型</td>
+<td>说明</td>
+</tr>
+<tr>
+<td>authtype</td>
+<td>AuthType enum</td>
+<td></td>
+</tr>
+<tr>
+<td>authenticationVector</td>
+<td>AuthenticationVector</td>
+<td>鉴权向量</td>
+</tr>
+<tr>
+<td>supi</td>
+<td>String supi</td>
+<td>若请求为suci，返回解密后的supi</td>
+</tr>
+<tr>
+<td>suportedFeatures</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在UE鉴权中UE请求包含同步信息，则根据携带的RAND回推seq信息，再计算mac与UE传过来的auts中的mac部分比较确认。认证通过则数据库同步UE中的seq。<br>AK是一个匿名密钥，用于隐藏序列号，因为后者可能会暴露用户的身份和位置。序列号的隐藏只是为了防止被动攻击。<br> <img src="https://img-blog.csdnimg.cn/7728374d624f495fb5aa928b18587fb6.png#pic_center" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/7728374d624f495fb5aa928b18587fb6.png#pic_center" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="rand生成"></p>
+<p>序列号同步流程</p>
+<h4 id="鉴权确认"><a href="#鉴权确认" class="headerlink" title="鉴权确认"></a>鉴权确认</h4><p><img src="https://img-blog.csdnimg.cn/731f232fb40d49d185f10b7fc068a01f.png#pic_center" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/731f232fb40d49d185f10b7fc068a01f.png#pic_center" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="鉴权确认算法"></p>
+<p>鉴权确认，AUSF向UDM发送Post请求，资源URI中包含SUPI，消息体仅包含AuthEvent参数。succees是UE认证的状态，成功UDM需要在UDR中保存Authevent信息。</p>
 
   </div>
   
@@ -2626,10 +2793,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-01-02T18:11:37+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-01-05T16:51:01+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年1月2日</p>
+    <p>更新于：2024年1月5日</p>
   </a>
 </div>
 
@@ -2648,7 +2815,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xiao-jiacheng.github.io/2024/01/02/hello-world/&title=Hello World - 是否沉默代替你的回答&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xiao-jiacheng.github.io/2024/01/05/5G%20UE%E9%89%B4%E6%9D%83%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3%20UE%20Authentication/&title=5G UE 鉴权流程  UE Authentication - 是否沉默代替你的回答&summary="
           
           >
           
@@ -2660,7 +2827,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xiao-jiacheng.github.io/2024/01/02/hello-world/&title=Hello World - 是否沉默代替你的回答&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xiao-jiacheng.github.io/2024/01/05/5G%20UE%E9%89%B4%E6%9D%83%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3%20UE%20Authentication/&title=5G UE 鉴权流程  UE Authentication - 是否沉默代替你的回答&summary="
           
           >
           
@@ -2672,7 +2839,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://xiao-jiacheng.github.io/2024/01/02/hello-world/&title=Hello World - 是否沉默代替你的回答&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://xiao-jiacheng.github.io/2024/01/05/5G%20UE%E9%89%B4%E6%9D%83%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3%20UE%20Authentication/&title=5G UE 鉴权流程  UE Authentication - 是否沉默代替你的回答&summary="
           
           >
           
@@ -2705,12 +2872,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/01/05/%E6%B5%B7%E8%BE%B9%E7%9A%84%E8%B4%9D%E5%A3%B3/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>2024年1月2日</p>
+        <a class='prev' href='/2024/01/05/5G%E6%A0%B8%E5%BF%83%E7%BD%91/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>5G 核心网</p>
+          <p class='content'>网元UDMUDM  Unified Data Management，统一数据管理功能，提供用户的签约数据管理以及协助AUSF完成用户认证和身份解密
+通过生成3GPPAKA身份验证凭据，通过对SU...</p>
+        </a>
+      
+      
+        <a class='next' href='/2024/01/05/%E6%B5%B7%E8%BE%B9%E7%9A%84%E8%B4%9D%E5%A3%B3/'>
+          <p class='title'>2024年1月5日<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>此文记录些书中有趣的句子，包括但不仅限于奇妙又别有新意的比喻，恰到好处的幽默，信达雅、兼具两种语言妙处的翻译或是奇奇怪怪的翻译腔。 希望给大家严肃的学习带来一些放松。
 如果真有错误发生————如...</p>
         </a>
-      
       
     </div>
   
@@ -2725,7 +2898,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/01/02/hello-world/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/01/05/5G%20UE%E9%89%B4%E6%9D%83%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3%20UE%20Authentication/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2767,7 +2940,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#SNN"><span class="toc-text">SNN</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%89%B4%E6%9D%83%E6%B5%81%E7%A8%8B%E7%9A%84%E8%A7%A6%E5%8F%91%E6%9D%A1%E4%BB%B6"><span class="toc-text">鉴权流程的触发条件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%89%B4%E6%9D%83%E6%B5%81%E7%A8%8B"><span class="toc-text">鉴权流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E9%98%B6%E6%AE%B5"><span class="toc-text">请求阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E6%96%B9%E5%90%911-AMF-SEAF-AUSF"><span class="toc-text">消息方向1  AMF&#x2F;SEAF -&gt; AUSF</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E6%96%B9%E5%90%912-AUSF-UDM"><span class="toc-text">消息方向2  AUSF -&gt; UDM</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E9%98%B6%E6%AE%B5"><span class="toc-text">响应阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#UDM%E7%94%9F%E6%88%90%E9%89%B4%E6%9D%83%E5%90%91%E9%87%8F"><span class="toc-text">UDM生成鉴权向量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#AUSF%E8%8E%B7%E5%BE%97%E9%89%B4%E6%9D%83%E4%BF%A1%E6%81%AF%E5%9B%9E%E5%BA%94"><span class="toc-text">AUSF获得鉴权信息回应</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#AUSF%E4%BF%9D%E5%AD%98XRES"><span class="toc-text">AUSF保存XRES*</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#AUSF%E8%AE%A1%E7%AE%97XRES"><span class="toc-text">AUSF计算XRES*</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E6%96%B9%E5%90%91%EF%BC%9AAUSF-AMF-SEAF"><span class="toc-text">消息方向：AUSF -&gt; AMF&#x2F;SEAF</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E6%96%B9%E5%90%91%EF%BC%9AAMF-SEAF-UE"><span class="toc-text">消息方向：AMF&#x2F;SEAF -&gt; UE</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UE%E8%AE%A1%E7%AE%97RES"><span class="toc-text">UE计算RES*</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E6%96%B9%E5%90%91%EF%BC%9A-UE-AMF-SEAF"><span class="toc-text">消息方向： UE -&gt; AMF&#x2F;SEAF</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#AMF-SEAF%E8%AE%A1%E7%AE%97HRES"><span class="toc-text">AMF&#x2F;SEAF计算HRES*</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E6%96%B9%E5%90%91%EF%BC%9A-AMF-SEAF-AUSF"><span class="toc-text">消息方向： AMF&#x2F;SEAF -&gt; AUSF</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#AUSF%E9%AA%8C%E8%AF%81RES"><span class="toc-text">AUSF验证RES*</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E6%96%B9%E5%90%91%EF%BC%9A-AUSF-AMF-SEAF"><span class="toc-text">消息方向： AUSF -&gt; AMF&#x2F;SEAF</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%89%B4%E6%9D%83%E7%A1%AE%E8%AE%A4%E5%92%8C%E6%B3%A8%E5%86%8C%E7%BB%91%E5%AE%9A%E9%83%A8%E5%88%86"><span class="toc-text">鉴权确认和注册绑定部分</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E6%96%B9%E5%90%91%EF%BC%9AAUSF-UDM"><span class="toc-text">消息方向：AUSF -&gt; UDM</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UDM%E4%BF%9D%E5%AD%98AuthEvent%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF"><span class="toc-text">UDM保存AuthEvent相关信息</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E6%96%B9%E5%90%91%EF%BC%9AUDM-AUSF"><span class="toc-text">消息方向：UDM -&gt; AUSF</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UDM%E5%AF%B9%E5%90%8E%E7%BB%AD%E6%B5%81%E7%A8%8B%E7%9A%84%E9%89%B4%E6%9D%83"><span class="toc-text">UDM对后续流程的鉴权</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UDM%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">UDM工作流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#AUSF-UDM"><span class="toc-text">AUSF -&gt; UDM</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%89%B4%E6%9D%83%E7%A1%AE%E8%AE%A4"><span class="toc-text">鉴权确认</span></a></li></ol>
     </div>
   </section>
 
@@ -3673,7 +3846,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"是否沉默代替你的回答","url":"https://xiao-jiacheng.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chaos","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://xiao-jiacheng.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Chaos 的个人空间"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://xiao-jiacheng.github.io/","name":"是否沉默代替你的回答"}},{"@type":"ListItem","position":3,"item":{"@id":"https://xiao-jiacheng.github.io/2024/01/02/hello-world/","name":"Hello World"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"是否沉默代替你的回答","url":"https://xiao-jiacheng.github.io/","keywords":null,"description":"Chaos 的个人空间","author":{"@type":"Person","name":"Chaos","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://xiao-jiacheng.github.io/","description":"Chaos 的个人空间"},"publisher":{"@type":"Organization","name":"是否沉默代替你的回答","url":"https://xiao-jiacheng.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://xiao-jiacheng.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hello World","description":"Chaos 的个人空间","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://xiao-jiacheng.github.io/2024/01/02/hello-world/"},"author":{"@type":"Person","name":"Chaos","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://xiao-jiacheng.github.io/"},"publisher":{"@type":"Organization","name":"是否沉默代替你的回答","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://xiao-jiacheng.github.io/2024/01/02/hello-world/","wordCount":0,"datePublished":"2024-01-02T10:11:37.447Z","dateModified":"2024-01-02T10:11:37.447Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"是否沉默代替你的回答","url":"https://xiao-jiacheng.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chaos","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://xiao-jiacheng.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Chaos 的个人空间"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://xiao-jiacheng.github.io/","name":"是否沉默代替你的回答"}},{"@type":"ListItem","position":3,"item":{"@id":"https://xiao-jiacheng.github.io/2024/01/05/5G UE鉴权流程详解 UE Authentication/","name":"5G UE 鉴权流程  UE Authentication"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"是否沉默代替你的回答","url":"https://xiao-jiacheng.github.io/","keywords":null,"description":"Chaos 的个人空间","author":{"@type":"Person","name":"Chaos","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://xiao-jiacheng.github.io/","description":"Chaos 的个人空间"},"publisher":{"@type":"Organization","name":"是否沉默代替你的回答","url":"https://xiao-jiacheng.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://xiao-jiacheng.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"5G UE 鉴权流程  UE Authentication","description":"Chaos 的个人空间","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://xiao-jiacheng.github.io/2024/01/05/5G%20UE%E9%89%B4%E6%9D%83%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3%20UE%20Authentication/"},"author":{"@type":"Person","name":"Chaos","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://xiao-jiacheng.github.io/"},"publisher":{"@type":"Organization","name":"是否沉默代替你的回答","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://xiao-jiacheng.github.io/2024/01/05/5G%20UE%E9%89%B4%E6%9D%83%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3%20UE%20Authentication/","wordCount":0,"datePublished":"2024-01-05T08:39:57.892Z","dateModified":"2024-01-05T08:51:01.336Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

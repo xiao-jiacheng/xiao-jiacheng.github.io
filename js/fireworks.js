@@ -16,6 +16,7 @@ function createParticule(e, t) {
     return a.x = e,
     a.y = t,
     a.color = colors[anime.random(0, colors.length - 1)],
+        //修改粒子大小
     a.radius = anime.random(16, 32),
     a.endPos = setParticuleDirection(a),
     a.draw = function() {
@@ -63,19 +64,19 @@ function animateParticules(e, t) {
             return e.endPos.y
         },
         radius: 0.1,
-        duration: anime.random(1200, 1800),
+        duration: anime.random(600, 800),
         easing: "easeOutExpo",
         update: renderParticule
     }).add({
         targets: a,
-        radius: anime.random(80, 160),
+        radius: anime.random(40, 80),
         lineWidth: 0,
         alpha: {
             value: 0,
             easing: "linear",
             duration: anime.random(600, 800)
         },
-        duration: anime.random(1200, 1800),
+        duration: anime.random(600, 900),
         easing: "easeOutExpo",
         update: renderParticule,
         offset: 0
@@ -96,7 +97,7 @@ function debounce(e, t) {
 var canvasEl = document.querySelector(".fireworks");
 if (canvasEl) {
     var ctx = canvasEl.getContext("2d"),
-    numberOfParticules = 30,
+    numberOfParticules = 20,
     pointerX = 0,
     pointerY = 0,
     tap = "mousedown",
@@ -194,7 +195,7 @@ function animateParticules(e, t) {
         update: renderParticule
     }).add({
         targets: a,
-        radius: anime.random(80, 160),
+        radius: anime.random(80, 120), //修改圆圈大小
         lineWidth: 0,
         alpha: {
             value: 0,

@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://xiao-jiacheng.github.io/friends/"/>
+  <link rel="canonical" href="https://xiao-jiacheng.github.io/2024/01/12/gdb调试找不到源代码/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,19 +33,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>friends - Chaos的人间流浪指南</title>
+  <title>GDB调试找不到源文件问题定位 - Chaos的人间流浪指南</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="Chaos 的个人空间 - Chaos - Chaos的人间流浪指南">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="friends">
-<meta property="og:url" content="https://xiao-jiacheng.github.io/friends/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GDB调试找不到源文件问题定位">
+<meta property="og:url" content="https://xiao-jiacheng.github.io/2024/01/12/GDB%E8%B0%83%E8%AF%95%E6%89%BE%E4%B8%8D%E5%88%B0%E6%BA%90%E4%BB%A3%E7%A0%81/index.html">
 <meta property="og:site_name" content="Chaos的人间流浪指南">
-<meta property="og:description" content="Chaos 的个人空间">
+<meta property="og:description" content="问题概述：GDB调试文件找不到file源码在GDB调试过程中，使用b设置断点 GDB提示找不到源码 问题分析1.GDB调试时找不到源码，在编译过程中并未将调试信息同时编译进编译文件，也就是编译选项中未添加 -g2.添加调试选项 -g编译后仍出现问题。编译程序分为编译与链接阶段，编译产生 .o文件，链接将.o 文件链接为最终的可执行文件。编译选项需要在链接和编译过程都添加。3.确认编译与链接过程都添">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-01-03T10:29:52.000Z">
-<meta property="article:modified_time" content="2024-01-03T10:29:52.565Z">
+<meta property="article:published_time" content="2024-01-11T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-01-12T09:16:47.015Z">
 <meta property="article:author" content="Chaos">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2443,7 +2443,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper page dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="http://nas.xiaojiacheng.top:5543/blog_pic/idx/test.jpg"></div>
 
@@ -2520,8 +2520,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-page" id="page" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://xiao-jiacheng.github.io/friends/index.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://xiao-jiacheng.github.io/2024/01/12/GDB调试找不到源代码/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Chaos的人间流浪指南">
   </span>
@@ -2542,16 +2542,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        friends
+        GDB调试找不到源文件问题定位
       </h1>
       <div class='new-meta-box'>
         
           
             
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="/" rel="nofollow">
-    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">请设置文章作者</p>
+  <a itemprop="url" class='author' href="blog.xiaojiacheng.top" rel="nofollow">
+    <img itemprop="image" src="http://nas.xiaojiacheng.top:5543/blog_pic/idx/康娜.png" class="lazyload" data-srcset="http://nas.xiaojiacheng.top:5543/blog_pic/idx/康娜.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Chaos</p>
   </a>
 </div>
 
@@ -2563,10 +2563,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-01-03T18:29:52+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-01-12T00:00:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2024年1月3日</p>
+    <p>发布于：2024年1月12日</p>
   </a>
 </div>
 
@@ -2589,9 +2589,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    
+    <h3 id="问题概述："><a href="#问题概述：" class="headerlink" title="问题概述："></a>问题概述：</h3><p>GDB调试文件找不到file源码<br>在GDB调试过程中，使用b设置断点 GDB提示找不到源码<br><img src="http://nas.xiaojiacheng.top:5543//blog_pic/uploads/2024/01/20240112162555.png" class="lazyload" data-srcset="http://nas.xiaojiacheng.top:5543//blog_pic/uploads/2024/01/20240112162555.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><p>1.GDB调试时找不到源码，在编译过程中并未将调试信息同时编译进编译文件，也就是编译选项中未添加 -g<br><img src="http://nas.xiaojiacheng.top:5543//blog_pic/uploads/2024/01/20240112163017.png" class="lazyload" data-srcset="http://nas.xiaojiacheng.top:5543//blog_pic/uploads/2024/01/20240112163017.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>2.添加调试选项 -g编译后仍出现问题。编译程序分为编译与链接阶段，编译产生 .o文件，链接将.o 文件链接为最终的可执行文件。编译选项需要在链接和编译过程都添加。<br>3.确认编译与链接过程都添加调试选项，仍有问题，确定需要断点调试的代码位于动态库内，前面步骤只替换了带有调试信息的可执行文件，动态库仍未包含可调试信息。替换动态库，可以正确进行断点<br><img src="http://nas.xiaojiacheng.top:5543//blog_pic/uploads/2024/01/20240112165319.png" class="lazyload" data-srcset="http://nas.xiaojiacheng.top:5543//blog_pic/uploads/2024/01/20240112165319.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>1.GBD调试找不到source file 是因为运行程序未包含可调试信息。<br>2.通过编译时增加调试选项 -g 为程序添加调试信息，编译，链接过程都添加。<br>3.当调试代码位于动态库中时，注意确保程序加载的动态库也包含调试信息。</p>
+<blockquote>
+<p>替换so文件后再次gdb调试，有时可能还是找不到源文件，推测为加载动态库的问题，确保动态库加载路径正确，以及替换动态库时先删除旧文件，再拷贝新的动态库文件到加载路径，大概率可以解决<br>当调试代码断点需要在程序未启动时设置，因为程序未启动，未加载动态库，会出现找不到源文件的情况，<img src="http://nas.xiaojiacheng.top:5543//blog_pic/uploads/2024/01/20240112165319.png" class="lazyload" data-srcset="http://nas.xiaojiacheng.top:5543//blog_pic/uploads/2024/01/20240112165319.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>确认需要调试代码无误的情况下，可以按照提示先设置断点，待动态库加载后断点依然能正常中断。</p>
+</blockquote>
+
   </div>
   
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
   
   
     
@@ -2601,10 +2619,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-01-03T18:29:52+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-01-12T17:16:47+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年1月3日</p>
+    <p>更新于：2024年1月12日</p>
   </a>
 </div>
 
@@ -2623,7 +2641,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xiao-jiacheng.github.io/friends/index.html&title=friends - Chaos的人间流浪指南&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xiao-jiacheng.github.io/2024/01/12/GDB%E8%B0%83%E8%AF%95%E6%89%BE%E4%B8%8D%E5%88%B0%E6%BA%90%E4%BB%A3%E7%A0%81/&title=GDB调试找不到源文件问题定位 - Chaos的人间流浪指南&summary="
           
           >
           
@@ -2635,7 +2653,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xiao-jiacheng.github.io/friends/index.html&title=friends - Chaos的人间流浪指南&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xiao-jiacheng.github.io/2024/01/12/GDB%E8%B0%83%E8%AF%95%E6%89%BE%E4%B8%8D%E5%88%B0%E6%BA%90%E4%BB%A3%E7%A0%81/&title=GDB调试找不到源文件问题定位 - Chaos的人间流浪指南&summary="
           
           >
           
@@ -2647,7 +2665,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://xiao-jiacheng.github.io/friends/index.html&title=friends - Chaos的人间流浪指南&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://xiao-jiacheng.github.io/2024/01/12/GDB%E8%B0%83%E8%AF%95%E6%89%BE%E4%B8%8D%E5%88%B0%E6%BA%90%E4%BB%A3%E7%A0%81/&title=GDB调试找不到源文件问题定位 - Chaos的人间流浪指南&summary="
           
           >
           
@@ -2678,6 +2696,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2024/01/10/Markdown%E5%86%99%E4%BD%9C%E6%A0%BC%E5%BC%8F/'>
+          <p class='title'>Markdown写作格式<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>由于我猪脑子🐖写Markdown格式总是查了忘，忘了又查，这里简单记录下常用的Markdown写作格式和小技巧。
+
+
+代码折叠使用html的折叠标签包裹md代码块内容，使用此种方式在本地md编...</p>
+        </a>
+      
+    </div>
+  
   <!-- Custom Files postEnd begin-->
   
   <!-- Custom Files postEnd end-->
@@ -2689,7 +2720,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/friends/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/01/12/GDB%E8%B0%83%E8%AF%95%E6%89%BE%E4%B8%8D%E5%88%B0%E6%BA%90%E4%BB%A3%E7%A0%81/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2721,9 +2752,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%A6%82%E8%BF%B0%EF%BC%9A"><span class="toc-text">问题概述：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="toc-text">问题分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">解决方案</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -2777,7 +2818,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3627,7 +3668,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chaos的人间流浪指南","url":"https://xiao-jiacheng.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chaos","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://xiao-jiacheng.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Chaos 的个人空间"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://xiao-jiacheng.github.io/","name":"Chaos的人间流浪指南"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Chaos的人间流浪指南","url":"https://xiao-jiacheng.github.io/","keywords":null,"description":"Chaos 的个人空间","author":{"@type":"Person","name":"Chaos","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://xiao-jiacheng.github.io/","description":"Chaos 的个人空间"},"publisher":{"@type":"Organization","name":"Chaos的人间流浪指南","url":"https://xiao-jiacheng.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://xiao-jiacheng.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"friends","description":"Chaos 的个人空间","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://xiao-jiacheng.github.io/friends/index.html"},"author":{"@type":"Person","name":"Chaos","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://xiao-jiacheng.github.io/"},"publisher":{"@type":"Organization","name":"Chaos的人间流浪指南","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://xiao-jiacheng.github.io/friends/index.html","wordCount":0,"datePublished":"2024-01-03T10:29:52.000Z","dateModified":"2024-01-03T10:29:52.565Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chaos的人间流浪指南","url":"https://xiao-jiacheng.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chaos","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://xiao-jiacheng.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Chaos 的个人空间"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://xiao-jiacheng.github.io/","name":"Chaos的人间流浪指南"}},{"@type":"ListItem","position":3,"item":{"@id":"https://xiao-jiacheng.github.io/2024/01/12/GDB调试找不到源代码/","name":"GDB调试找不到源文件问题定位"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Chaos的人间流浪指南","url":"https://xiao-jiacheng.github.io/","keywords":null,"description":"Chaos 的个人空间","author":{"@type":"Person","name":"Chaos","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://xiao-jiacheng.github.io/","description":"Chaos 的个人空间"},"publisher":{"@type":"Organization","name":"Chaos的人间流浪指南","url":"https://xiao-jiacheng.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://xiao-jiacheng.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"GDB调试找不到源文件问题定位","description":"Chaos 的个人空间","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://xiao-jiacheng.github.io/2024/01/12/GDB%E8%B0%83%E8%AF%95%E6%89%BE%E4%B8%8D%E5%88%B0%E6%BA%90%E4%BB%A3%E7%A0%81/"},"author":{"@type":"Person","name":"Chaos","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://xiao-jiacheng.github.io/"},"publisher":{"@type":"Organization","name":"Chaos的人间流浪指南","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://xiao-jiacheng.github.io/2024/01/12/GDB%E8%B0%83%E8%AF%95%E6%89%BE%E4%B8%8D%E5%88%B0%E6%BA%90%E4%BB%A3%E7%A0%81/","wordCount":0,"datePublished":"2024-01-11T16:00:00.000Z","dateModified":"2024-01-12T09:16:47.015Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
